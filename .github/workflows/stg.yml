@@ -1,0 +1,35 @@
+name: Deploy Staging
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  delete_this_job:
+    runs-on: ubuntu-latest
+    name: Delete this job
+    steps:
+      - name: readme
+        shell: bash
+        id: long-lived-branch
+        run: |
+          echo "Uncomment the 'deploy' job"
+  # deploy:
+  #   name: Deploy Staging
+  #   uses: bancodebogota/bbog-dt-pipeline/.github/workflows/deploy_angular_frontend.yml@v2
+  #   with:
+  #     app-name: "bbog-dig-dt-angular-template-web-ui"
+  #     version: $(node -p "require('./package.json').version")
+  #     build-folder: "dist/bbog-dig-dt-angular-template-web-ui"
+  #     bucket: "bucket_name"
+  #     distribution-id: "distribution_id"
+  #     node-version: "16.x"
+  #     build-command: "npm run build:st"
+  #     environment: st
+  #   secrets:
+  #     DIG_READER_GITHUB_ACCESS_TOKEN: ${{ secrets.DIG_READER_GITHUB_ACCESS_TOKEN }}
+  #     ARTIFACTORY_READER_USER: ${{ secrets.ARTIFACTORY_READER_USER }}
+  #     ARTIFACTORY_READER_API_KEY: ${{ secrets.ARTIFACTORY_READER_API_KEY }}
+  #     AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
+  #     AWS_ROLE_DEPLOY_FRONTEND: ${{ secrets.AWS_ROLE_DEPLOY_FRONTEND }}
