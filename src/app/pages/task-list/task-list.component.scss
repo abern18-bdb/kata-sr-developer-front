@@ -1,0 +1,13 @@
+:host {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding: 24px;
+
+        button {
+            width: fit-content;
+            margin-bottom: 16px;
+        }
+    }
+}

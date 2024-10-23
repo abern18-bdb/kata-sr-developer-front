@@ -1,32 +1,20 @@
 {
-  "name": "bbog-dig-dt-angular-template-web-ui",
+  "name": "kata-sr-developer-front",
   "version": "1.0.2",
-  "description": "Template example for generating frontend repos for bdb. Courtesy of @mnieto2 and @aacos13",
+  "description": "proyecto kata sr developer",
   "keywords": [
     "github",
     "actions",
     "angular",
-    "husky",
     "bbog",
     "template"
   ],
   "bugs": {
-    "email": "mnieto2@bancodebogota.com.co",
-    "url": "https://github.com/bancodebogota/bbog-dig-dt-angular-template-web-ui/issues"
-  },
-  "author": {
-    "email": "mnieto2@bancodebogota.com.co",
-    "name": "Mateo Nieto",
-    "url": "https://github.com/mnieto2"
-  },
-  "author2": {
-    "email": "aacos13@bancodebogota.com.co",
-    "name": "Andres Mauricio Acosta Pulido",
-    "url": "https://github.com/aacos13"
+    "url": "https://github.com/abern18-bdb/kata-sr-developer-front/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bancodebogota/bbog-dig-dt-angular-template-web-ui.git"
+    "url": "https://github.com/abern18-bdb/kata-sr-developer-front"
   },
   "license": "MIT",
   "scripts": {
@@ -38,21 +26,12 @@
     "build:st": "ng build --configuration=staging --aot",
     "build:prod": "ng build --configuration=production",
     "test": "npm run lint && jest",
+    "test:watch": "jest --watchAll",
     "coverage": "jest --coverage",
     "test:coverage": "npm run test && npm run coverage",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix=true",
-    "sonar": "gulp sonar",
-    "shscan": "npx bbog-dig-dt-sherpa-scanner-lib -c sherpa-scanner.config.js",
-    "test:config": "npm run test && npm run coverage"
-  },
-  "husky": {
-    "//1": "Use git commit --no-verify to bypass the pre-commit hook",
-    "//2": "Use git push --no-verify to bypass the pre-push hook",
-    "hooks": {
-      "pre-commit": "npm run lint",
-      "pre-push": "npm run test"
-    }
+    "sonar": "gulp sonar"
   },
   "private": true,
   "dependencies": {
@@ -89,7 +68,6 @@
     "@typescript-eslint/eslint-plugin": "6.2.0",
     "@typescript-eslint/parser": "6.2.0",
     "eslint": "^8.46.0",
-    "husky": "^8.0.3",
     "jest": "^29.6.2",
     "jest-preset-angular": "^13.1.1",
     "typescript": "~5.1.6"

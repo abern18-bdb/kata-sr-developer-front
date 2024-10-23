@@ -1,0 +1,16 @@
+<bdb-tp-xcenter-login-form login-title="Te damos la bienvenida">
+  <bdb-ml-xcenter-login-form #loginCntg slot="slot-content" (infoSubmit)="onSubmit($event)"
+    [elements]="leftElements"></bdb-ml-xcenter-login-form>
+
+  <div slot="slot-image" class="bdb-tp-xcenter-login-form__slot-image">
+    <div class="bdb-tp-xcenter-login-form__slot-image__image">
+      <div class="bdb-tp-xcenter-login-form__slot-image__image__logo"></div>
+    </div>
+  </div>
+</bdb-tp-xcenter-login-form>
+
+<bdb-at-toast #toast type="ERROR" title-toast="Tus datos no coinciden" [textDesc]="errorMessage" is-close="false"
+  time="5000">
+</bdb-at-toast>
+
+<bdb-ml-loader #loader text-label="Estamos validando ..."></bdb-ml-loader>

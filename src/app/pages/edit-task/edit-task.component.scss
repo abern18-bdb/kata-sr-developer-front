@@ -1,0 +1,39 @@
+:host {
+  .container {
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 24px;
+    width: 400px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+  }
+
+  section {
+    max-width: 568px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &.header-description {
+      h5 {
+        margin: 0;
+      }
+
+      p {
+        margin: var(--sherpa-spacing-3) 0 var(--sherpa-spacing-8) 0;
+      }
+    }
+
+    &.download-file {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      margin-top: var(--sherpa-spacing-7);
+
+      .bdb-at-btn--secondary {
+        width: 60%;
+        margin-left: var(--sherpa-spacing-4);
+      }
+    }
+  }
+}

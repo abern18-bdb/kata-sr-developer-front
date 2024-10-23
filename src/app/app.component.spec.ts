@@ -24,8 +24,4 @@ describe('TestComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should validate text', () => {
-    expect(typeof (component.title)).toBe('string')
-    expect(component.title).toEqual('template');
-  });
 });

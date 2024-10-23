@@ -1,13 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title: string;
-  constructor() {
-    this.title = 'template';
+export class AppComponent implements OnInit {
+  constructor() { }
+
+  ngOnInit(): void {
+    this.clearLocalStorage();
+  }
+
+  clearLocalStorage(): void {
+    localStorage.clear();
   }
 }

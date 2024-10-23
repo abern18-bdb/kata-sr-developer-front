@@ -1,0 +1,19 @@
+<bdb-ml-header back='FALSE' close='TRUE' (closeBtnClicked)="goLogin($event)">
+</bdb-ml-header>
+
+<div class="container">
+  <h5 class="sherpa-typography-heading-5">Administración de tareas</h5>
+
+  <button class='bdb-at-btn  bdb-at-btn--primary bdb-at-btn--lg--ico ' (click)="createTask()">
+    <span class='ico-checklist'>
+    </span>Crear Tarea</button>
+
+
+  <bdb-ml-dynamic-table [columnTable]="tableData.cols" [rowTable]="tableData.rows" (buttonClick)="editTask($event)">
+  </bdb-ml-dynamic-table>
+
+
+  <bdb-ml-modal #modal is-close icon="warning" [titleModal]="modalJson.title" [subTitle]="modalJson.desc"
+    [optionsButtons]="modalJson.optionsButtons" (buttonAlertClicked)="deleteTask($event)"></bdb-ml-modal>
+
+  <bdb-ml-loader #loader text-label="Cerrando sesión ..."></bdb-ml-loader>

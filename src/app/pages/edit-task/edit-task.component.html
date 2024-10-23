@@ -1,0 +1,31 @@
+<bdb-ml-header back='FALSE' close='TRUE' (closeBtnClicked)="goLogin($event)">
+</bdb-ml-header>
+
+<div class="container">
+
+  <h5 class="sherpa-typography-heading-8">{{ id ? 'Editar Tarea' : 'Agregar Tarea' }}</h5>
+  <form>
+    <div>
+      <bdb-at-input label="Titulo" placeholder="Titulo" type="TEXT" status="ENABLED" required="true"
+        message="El titulo es obligatorio" (atInputChanged)="getTitle($event)">
+      </bdb-at-input>
+    </div>
+    <br>
+    <div>
+      <bdb-at-input label="Descripción" placeholder="Descripción" type="TEXT" status="ENABLED" required="true"
+        message="El descripción es obligatorio" (atInputChanged)="getDescription($event)">
+      </bdb-at-input>
+    </div>
+    <section class="download-file">
+      <button class="bdb-at-btn bdb-at-btn--primary bdb-at-btn--lg" (click)="saveTask()">
+        {{ id ? 'Actualizar' : 'Agregar' }}
+      </button>
+
+      <button class="bdb-at-btn bdb-at-btn--secondary bdb-at-btn--lg" (click)="goBack()">
+        Cancelar
+      </button>
+    </section>
+
+  </form>
+
+  <bdb-ml-loader #loader text-label="Cerrando sesión ..."></bdb-ml-loader>

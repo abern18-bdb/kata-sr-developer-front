@@ -1,0 +1,44 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 99.9%;
+  margin: 0;
+
+  @media (max-width: 1025px) {
+    .bdb-tp-xcenter-login-form__slot-image {
+      display: none;
+    }
+  }
+
+  bdb-tp-xcenter-login-form {
+    .bdb-tp-xcenter-login-form__slot-image {
+      width: 50%;
+      height: calc(100% - 80px);
+      margin: var(--sherpa-spacing-8) var(--sherpa-spacing-10) var(--sherpa-spacing-8) var(--sherpa-spacing-0);
+
+      .bdb-tp-xcenter-login-form__slot-image__image {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: end;
+        align-items: flex-end;
+        border-radius: 12px;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("/assets/bluey.svg");
+
+        .bdb-tp-xcenter-login-form__slot-image__image__logo {
+          margin: var(--sherpa-spacing-0) auto;
+          width: 80%;
+          border-radius: 12px;
+          height: 20%;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: bottom;
+          background-image: url(/assets/img/xcenter-login/logo-white.svg);
+        }
+      }
+    }
+  }
+}
